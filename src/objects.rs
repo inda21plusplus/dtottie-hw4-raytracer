@@ -201,14 +201,14 @@ impl Light {
             Light::Spherical(ref s) => s.color,
         }
     }
-
+    //https://bheisler.github.io/post/writing-raytracer-in-rust-part-3/
     pub fn direction_from(&self, hit_Coordinate: &Coordinate) -> Vec3 {
         match *self {
             Light::Directional(ref d) => -d.direction,
             Light::Spherical(ref s) => (s.position - *hit_Coordinate).normalize(),
         }
     }
-
+    //https://bheisler.github.io/post/writing-raytracer-in-rust-part-3/
     pub fn strength(&self, hit_Coordinate: &Coordinate) -> f32 {
         match *self {
             Light::Directional(ref d) => d.strength,
@@ -218,7 +218,7 @@ impl Light {
             }
         }
     }
-
+    //https://bheisler.github.io/post/writing-raytracer-in-rust-part-3/
     pub fn distance(&self, hit_Coordinate: &Coordinate) -> f64 {
         match *self {
             Light::Directional(_) => ::std::f64::INFINITY,
