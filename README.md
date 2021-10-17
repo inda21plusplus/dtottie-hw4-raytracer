@@ -1,2 +1,2 @@
 # dtottie-hw4-raytracer
-![alt text](spheres.png)
+![alt text](spheres2.png)
